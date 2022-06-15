@@ -1,3 +1,170 @@
+# Project - Simple Interest Calculator
+
+# Objectives
+
+1.  Clone the project repo.
+2.  Modify the html file as per requirements.
+3.  Modify the css file as per requirements.
+4.  Modify the javascript file as per requirements.
+5.  Verify if the app is working properly.
+6.  Upload to GitHub and submit the github pages URL for peer review.
+
+# Exercise 1 : Clone the project repo.
+
+1.  In the project prepration phase you have forked the project into your GitHub Account. Copy the URL from your repository.
+
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Project/images/copy_cloneurl.png">
+
+2.  Open a new terminal.
+
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Project/images/newterminal.png">
+
+3.  Clone the project repository onto your local machine or the Theia environment from the github fork, using the URL you copied in step 1.
+
+```
+git clone <paste your repo clone url here>
+```
+
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Project/images/gitclone_remoteurl.png">
+
+# Exercise 2 : Modify the html file.
+
+In this exercise, you will correct any mistakes in the existing code and also add any missing tags.
+
+1.  On the file explorer navigate to the `index.html`.
+
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Project/images/indexhtmledit.png">
+
+1.  Doctype is missing. Add the doctype.
+
+```html
+<!DOCTYPE html>
+```
+
+2.  Add "Simple Interest Calculator" as title.
+
+```html
+<title>Any relevant title you want to give</title>
+```
+
+3.  Move all the content which currently is in the `<body>` to a `<div>` tag.
+
+4.  Set the class attribute of this div to 'maindiv'.
+
+```html
+<div class="maindiv">
+.
+.
+.
+.
+</div>
+```
+
+5.  Modify the input text box for interest rate to a slider using the `<input type="range">` tag.
+
+```html
+<input type="range"  id="rate" min="minval" max="maxval" value="default_val">
+```
+
+6.  For the rate input, set the attributes min to 1, max to 20 and step to 0.25 and the default value to 10.25.
+
+*Range is an elegant way to input numeric input. But the drawback is that it does not visually show value the user has selected.*
+
+7.  To show the value selected by the `range`, create a `<span>` element right after the range.
+
+```html
+<span id="rate_val">
+</span>
+```
+
+8.  Inside the '<span>\` tag add the text "10.25 %".
+
+```html
+<span id="rate_val">
+10.25%
+</span>
+```
+
+9.  Modify the input text box for "No of years" into a dropdown box with options 1 to 10.
+
+```html
+<select id="years">
+    <option value="1">1</option>
+    <!-- fill in the rest of the values-->
+</select>
+```
+
+10. Change the name of "Compute" button to "Compute Interest".
+
+11. Below the "Compute Interest" button create an empty `<span>` and set its id to 'result'.
+
+```html
+<span id="result">
+
+</span>
+```
+
+12. Add a copyright message using the `<footer>` tag.
+
+```
+<footer>
+
+        &#169; This Calculator belongs to --your name--
+
+
+</footer>
+```
+
+# Exercise 3 : Modify the css file.
+
+In this exercise, you will correct the look and feel of the web page.
+
+1.  On the file explorer navigate to the style sheet.
+
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Project/images/stylesheet.png">
+
+2.  Set the body color to 'black', font to arial and font color to white.
+
+```css
+body {background-color:black;font-family:arial;color:white}
+```
+
+3.  Set the `<h1>` color to 'grey' and font to verdana.
+
+```css
+h1{color:grey;font-family:verdana}
+```
+
+4.  Create an entry for class 'maindiv'.
+
+```css
+.maindiv {
+}
+```
+
+5.  Set the background color to white, font color to black, width to 300 pixels, and padding to 20px in the newly created maindiv class.
+
+6.  Set the border radius to 25 px.
+
+7.  Align the div to the center of the page.
+
+<details><summary>Click to see how the new class should look like</summary>
+
+```css
+.maindiv {
+    background-color:white;
+    color:black;
+    width:300px;
+    padding:20px;
+    border-radius:25px;
+    align:center
+}
+```
+
+</details>
+
+8.  Visualize your html file in the browser and make sure that you have not missed anything.
+
 # Exercise 4 : Modify the javascript file.
 
 In this exercise, you will write the javascript code in the file **script.js** to implement the simple interest calculation logic.
@@ -37,7 +204,7 @@ In this exercise, you will write the javascript code in the file **script.js** t
 7.  Write a function that reads the value of the range slider and displays it the `<span>`adjacent to the slider.
 
 ```js
-function updateRate() 
+function updateRate()
 {
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval;
@@ -140,3 +307,9 @@ Submit this URL for peer review.
 Rav Ahuja
 
 ## Changelog
+
+| Date       | Version | Changed by        | Change Description                        |
+| ---------- | ------- | ----------------- | ----------------------------------------- |
+| 2020-09-09 | 1.2     | Lavanya           | Added some pics and explicit instructions |
+| 2020-09-09 | 1.1     | Ramesh Sannareddy | Added 'publishing to gitpages'            |
+| 2020-08-23 | 1.0     | Ramesh Sannareddy | Initial version created                   |
