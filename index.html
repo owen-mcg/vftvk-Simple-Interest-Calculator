@@ -11,38 +11,52 @@
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
 
-            <span>Amount<input type="number" id="principal" value="1"></span>
-            <br />
-            <span>Interest Rate<input type="range" id="rate" min="1" max="20" step="0.25" value="10.25"
-                       onchange="updateRate()"></span>
-            <span id="rate_val">
-                10.25%
-            </span>
-            <br />
-            <span>No. of Years<select id="years">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select></span>
-            <br />
-            <span>
-                <button onclick="compute()">Compute Interest</button>
-            </span>
-            <br />
-            <span id="result"></span>
-            <br />
+
+            <div class="form">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="first"><label for="principal">Amount</label></td>
+                            <td class="second"><input type="number" id="principal" value="1"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="first"><label for="rate">Interest Rate</label></td>
+                            <td class="second"><input type="range" id="rate" min="1" max="20" step="0.25" value="10.25"
+                                       onchange="updateRate()">
+                                <span id="rate_val">10.25%</span>
+                            </td>
+                            <td id="rateDisplay"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="first"><label for="years">No. of Years</label></td>
+                            <td class="second"><select id="years">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select></td>
+                        </tr>
+
+                        <tr id="button">
+                            <td><button onclick="compute()">Compute Interest</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="result"></p>
+            </div>
+
+            <footer class="footer">
+                &#169; This calculator belongs to owen-mcg
+            </footer>
         </div>
-        <br />
-        <footer class="footer">
-            &#169; This calculator belongs to the GitHub user known as owen-mcg
-        </footer>
     </body>
 
 </html>
