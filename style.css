@@ -11,7 +11,7 @@ body {
     width: 300px;
     padding: 20px;
     border-radius: 25px;
-    align-content: center;
+    margin: auto;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
 
 table {
     width: 100%;
-    padding: 0% 10% 10% 8%;
+    padding: 0% 10% 5% 8%;
     margin: auto;
 }
 
@@ -42,7 +42,12 @@ button {
     width: 66%;
 }
 
-p {
+#result {
     margin-left: 8%;
     margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.highlight {
+    background-color: yellow;
 }
